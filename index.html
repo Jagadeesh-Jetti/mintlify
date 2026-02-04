@@ -16,43 +16,101 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="navbar container">
-        <div class="nav-left">
-          <img class="logo-name" src="/assets/mintlify-wordmark.svg" />
-        </div>
-        <div class="nav-center">
-          <div class="nav-center-child">Resources</div>
-          <div class="nav-center-child">Documentation</div>
-          <div class="nav-center-child">Customers</div>
-          <div class="nav-center-child">Blog</div>
-          <div class="nav-center-child">Pricing</div>
-        </div>
-        <div class="nav-right">
-          <button class="nav-right-child">Contact Sales</button>
-          <button class="nav-right-child">Start for free</button>
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <div class="nav-inner-left">
+            <span class="nav-left">
+              <img class="logo-name" src="/assets/mintlify-wordmark.svg" />
+            </span>
+            <div class="nav-center">
+              <a class="nav-center-child">Resources</a>
+              <a class="nav-center-child">Documentation</a>
+              <a class="nav-center-child">Customers</a>
+              <a class="nav-center-child">Blog</a>
+              <a class="nav-center-child">Pricing</a>
+            </div>
+          </div>
+
+          <div class="nav-inner-right">
+            <div class="nav-right">
+              <a class="contact-button">Contact Sales</a>
+              <button class="start-free-button">Start for free</button>
+            </div>
+          </div>
         </div>
       </nav>
-      <section class="hero-content">
-        <p class="badge">
-          <button>NEW</button>Self-updating docs with agent suggestions
-        </p>
 
-        <h1>The Intelligent Knowledge Platform</h1>
+      <section class="container hero-wrapper">
+        <a href="" class="announcement-banner">
+          <span class="badge-new"> new </span>
+          <p class="banner-text">Self-updating docs with agent suggestions</p>
+          <svg class="banner-icon" viewbox="0 0 18 18" fill="none">
+            <path
+              d="M9 1C4.589 1 1 4.589 1 9C1 13.411 4.589 17 9 17C13.411 17 17 13.411 17 9C17 4.589 13.411 1 9 1ZM11.53 9.53L8.53 12.53C8.384 12.676 8.192 12.75 8 12.75C7.808 12.75 7.616 12.677 7.47 12.53C7.177 12.237 7.177 11.762 7.47 11.469L9.94 8.999L7.47 6.529C7.177 6.236 7.177 5.761 7.47 5.468C7.763 5.175 8.238 5.175 8.531 5.468L11.531 8.468C11.824 8.761 11.824 9.236 11.531 9.529L11.53 9.53Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
 
-        <p>
-          Get the knowledge infrastructure that keeps AI agents accurate,
-          reliable, and up to date.
-        </p>
-
-        <div class="cta">
-          <input type="email" placeholder="Email address" />
-          <button>Start now</button>
+        <div class="hero-content">
+          <div class="hero-title">The Intelligent Knowledge Platform</div>
+          <div class="hero-sub">
+            Helping teams create and maintain world-class documentation built
+            for both humans and AI
+          </div>
+          <div class="hero-form">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit" class="start-free-button">Start now</button>
+          </div>
         </div>
 
-        <div class="image-div">
-          <img class="screenshot" src="/assets/hero-image-light.svg" />
+        <div class="image-showcase">
+          <div class="image-border">
+            <img src="/assets/hero-image-light.svg" alt="illustration" />
+          </div>
         </div>
       </section>
     </header>
+
+    <section class="logo-section">
+      <div class="logo-container">
+        <div
+          class="logo-box anthropic"
+          title="Anthropic"
+          role="img"
+          aria-label="Anthropic"
+        >
+          <svg width="130" height="25" viewbox="0 0 102 19"></svg>
+        </div>
+
+        <div class="logo-item" title="Coinbase">
+          <svg class="coinbase-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="Microsoft">
+          <svg class="microsoft-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="Perplexity">
+          <svg class="perplexity-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="Hubspot">
+          <svg class="hubspot-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="X">
+          <svg class="x-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="Paypal">
+          <svg class="paypal-logo"></svg>
+        </div>
+
+        <div class="logo-item" title="Lovable">
+          <svg class="lovable-logo"></svg>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

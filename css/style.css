@@ -1,5 +1,4 @@
-body,
-html {
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -13,32 +12,50 @@ html {
 }
 
 .site-header {
+  width: 100%;
+  min-height: 100vh;
   background-image: url('/assets/bg-light.svg');
-  zoom: 121%;
-  /* background-size: cover; */
+  background-size: cover;
   background-position: center;
-  height: 135%;
+}
+
+.container {
+  margin: 0 auto;
+  /* padding: 0 24px; */
+  /* background-color: green; */
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 1.5rem;
-  font-weight: 600;
-  font-size: 14px;
-  height: 10px;
+  display: block;
+  padding-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 66rem;
 }
 
-.nav-left {
+.nav-inner {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-inner-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 96px;
+}
+
+@media (min-width: 1080px) {
+  .nav-inner-left {
+    column-gap: 168px;
+  }
 }
 
 .logo-name {
-  height: 23px;
+  height: 50px;
   width: 100px;
   display: block;
   transform: scale(0.8);
@@ -66,58 +83,248 @@ html {
   cursor: pointer;
 }
 
-.nav-right {
+.nav-inner-right {
   display: flex;
-  gap: 1px;
-  padding-block: 4.5px;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
 }
 
-.nav-right-child {
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  color: white;
+  height: fit-content;
+  white-space: nowrap;
   padding: 4.5px 12px;
   border-radius: 9999px;
-
-  font-family: Inter, sans-serif;
-  font-size: 15px;
   font-weight: 500;
-
-  background-color: rgba(255, 255, 255, 0.6); /* glass */
-  color: #0f172a;
-
-  border: 1px solid rgba(255, 255, 255, 0.4);
-
+  font-size: 15px;
+  gap: 6px;
   cursor: pointer;
-  backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  transition:
+    color 0.1s,
+    background-color 0.1s;
+  border: 1px solid transparent;
+}
 
-  transition: background-color 0.1s ease;
+@media (max-screen: 1023px) {
+  .contact-button {
+    display: none;
+  }
+}
+
+.start-free-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  white-space: nowrap;
+  padding: 4.5px 12px;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 15px;
+  gap: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transform: none;
+}
+
+.hero-wrapper {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.announcement-banner {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 4px 8px 4px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+
+  border-radius: 60px;
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.announcement-banner:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-text {
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.banner-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.badge-new {
+  display: inline-flex;
+  align-items: items;
+  padding: 2px 8px;
+  border-radius: 60px;
+  text-transform: uppercase;
+
+  background-color: var(--color-brand-light, #18e299);
+  color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+@media (min-width: 640px) {
+  .badge-new {
+    font-size: 12px;
+  }
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  margin: 100px;
-  padding-left: 15%;
-  padding-right: 15%;
-
-  justify-content: center;
   align-items: center;
-  background-color: blue;
+  padding: 104px 24px 72px 24px;
+  text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 115%;
+.hero-title {
+  max-width: 43rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff;
+  text-wrap: balance;
 }
 
-.image-div {
-  width: 120%;
-  margin: 0 auto;
+.hero-sub {
+  margin-top: 24px;
+  max-width: 472px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #9ca3af;
 }
 
-.screenshot {
+.hero-form {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  width: 100%;
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blue(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.hero-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding-left: 12px;
+  font-size: 15px;
+}
+
+.image-showcase {
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-bottom: none;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
+}
+
+.image-border img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem 9rem 2rem;
+  margin: 0 auto;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo-item {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.logo-item svg path {
+  fill: var(--color-text-main);
+}
+
+@media (min-width: 768px) {
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 28px; /* gap-y-7 */
+  }
+
+  .logo-item {
+    height: 64px; /* h-16 */
+    width: auto;
+  }
+}
+
+.coinbase-blue {
+  fill: #0052ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .coinbase-blue {
+    fill: #578bfa;
+  }
 }
