@@ -84,7 +84,7 @@ The color palette closely follows Mintlify’s minimal and developer-focused aes
 
 ---
 
-## Live Link - 
+## Live Link - https://mintlify-smoky.vercel.app/
 
 ## Screenshots
 
