@@ -29,34 +29,33 @@ body {
   top: 0;
   z-index: 100;
   width: 100%;
+  align-items: center;
 
   background: transparent;
+  backdrop-filter: blur(12px);
+
   transition:
     background-color 0.2s ease,
     backdrop-filter 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.navbar.scrolled {
-  background: rgba(2, 44, 67, 0.7);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav-inner {
   max-width: 66rem;
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem;
 
   display: flex;
-  column-gap: 2rem;
+  gap: 3rem;
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-inner-left {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   align-items: center;
   column-gap: 96px;
 }
@@ -68,10 +67,9 @@ body {
 }
 
 .logo-name {
-  height: 50px;
   width: 100px;
-  display: block;
-  transform: scale(0.8);
+  /* display: block; */
+  transform: scale(1);
 }
 
 .nav-center {
@@ -89,6 +87,7 @@ body {
   padding-bottom: 0.25rem;
   border: transparent;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .nav-center-child:hover {
@@ -115,23 +114,18 @@ body {
   color: white;
   height: fit-content;
   white-space: nowrap;
-  padding: 4.5px 12px;
+  padding: 8px 12px;
   border-radius: 9999px;
   font-weight: 500;
   font-size: 15px;
   gap: 6px;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
   transition:
     color 0.1s,
     background-color 0.1s;
   border: 1px solid transparent;
-}
-
-@media (max-screen: 1023px) {
-  .contact-button {
-    display: none;
-  }
 }
 
 .start-free-button {
@@ -140,7 +134,7 @@ body {
   justify-content: center;
   height: fit-content;
   white-space: nowrap;
-  padding: 4.5px 12px;
+  padding: 8px 12px;
   border-radius: 9999px;
   font-weight: 500;
   font-size: 15px;
@@ -150,7 +144,7 @@ body {
 
   background-color: #fff;
   color: #000;
-  border: 1px solid #000;
+  border: none;
 
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   transform: none;
@@ -173,7 +167,7 @@ body {
   gap: 10px;
 
   padding: 4px 8px 4px 8px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #044868;
   backdrop-filter: blur(12px);
 
   border-radius: 60px;
@@ -210,7 +204,7 @@ body {
   border-radius: 60px;
   text-transform: uppercase;
 
-  background-color: var(--color-brand-light, #18e299);
+  background-color: var(--color-brand-light, #0c8c5e);
   color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
@@ -247,7 +241,7 @@ body {
   max-width: 472px;
   font-size: 18px;
   line-height: 1.5;
-  color: #9ca3af;
+  color: #f7f7f7;
 }
 
 .hero-form {
@@ -272,6 +266,10 @@ body {
   color: white;
   padding-left: 12px;
   font-size: 15px;
+}
+
+.hero-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .image-showcase {
@@ -453,6 +451,7 @@ body {
 
 .featThree-description-headliner {
   align-items: center;
+  color: #0c8c82;
 }
 
 .featThree h4 {
@@ -611,14 +610,14 @@ body {
   line-height: 0.8;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: ##0c9073;
+  color: #0c9073;
 }
 
 .customers-intro h2 {
-  color: var(--text-main); /* assuming text-text-main uses a CSS variable */
+  color: var(--text-main);
   font-size: 40px;
   text-align: center;
-  font-weight: 600; /* font-semibold */
+  font-weight: 600;
   line-height: 110%;
   letter-spacing: -0.1px;
   margin: 0;
